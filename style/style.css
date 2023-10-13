@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../public/wallpaper.jpg"); /* Ruta de tu imagen de fondo */
+    background-repeat: repeat; /* La imagen se repetirá en ambas direcciones */
+    height: 100vh; /* Altura del contenedor, en este caso, ocupará el 100% del alto de la ventana */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(31,31,31,0.7898472938);
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+
+.logo img {
+    width: 80px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: auto;
+    margin-right: 10px;
+}
+
+.titulo {
+    font-size: 40px;
+    text-align: left;
+}
+
+.gridcontainer {
+    justify-content: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Tamaño de cada columna */
+    grid-template-rows: repeat(3, 100px); /* Tamaño de cada fila */
+    gap: 10px; /* Espacio entre los cuadrados */
+}
+
+.griditem {
+    background-color: rgba(31,31,31,0.7898472938);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff; /* Contorno blanco */
+    color: #fff; /* Color de texto blanco */
+    font-size: 24px; /* Tamaño de la letra */
+}
+
+
+
+
+
+
