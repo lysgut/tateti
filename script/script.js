@@ -1,17 +1,23 @@
 const xo = ["X", "O"]
-const xo1 = xo[document.getElementById("simboloJugador1").value]
-const xo2 = xo[1 - document.getElementById("simboloJugador1").value]
+let xo1;
+let xo2;
+let jugador1;
+let jugador2;
 
 function continuarJugador1() {
     popupJugador1.style.display = "none";
     popupJugador2.style.display = "block";
+    xo1 = xo[document.getElementById("simboloJugador1").value]
+    xo2 = xo[1 - document.getElementById("simboloJugador1").value]
 }
 
 
 
 function continuarJugador2() {
-    const jugador1 = document.getElementById("nombreJugador1").value;
-    const jugador2 = document.getElementById("nombreJugador2").value;
+    xo1 = xo[document.getElementById("simboloJugador1").value]
+    xo2 = xo[1 - document.getElementById("simboloJugador1").value]
+    jugador1 = document.getElementById("nombreJugador1").value;
+    jugador2 = document.getElementById("nombreJugador2").value;
     console.log(jugador1 + " = " + xo1)
     console.log(jugador2 + " = " + xo2)
     popupJugador2.style.display = "none";
@@ -37,12 +43,12 @@ let player = 0
             if (player == 0) {
                 botones[i].textContent = xo1
                 console.log('Celda ' + i2 + " para " + xo1);
-                msg.textContent = "Jugando " + document.getElementById("nombreJugador2").value + "( " +xo2+ " )"
+                msg.textContent = "Jugando " + jugador2 + "( " +xo2+ " )"
 
             } else {
                 botones[i].textContent = xo2
                 console.log('Celda ' + i2 + " para " + xo2);
-                msg.textContent = "Jugando " + document.getElementById("nombreJugador1").value + "( " +xo1+ " )"
+                msg.textContent = "Jugando " + jugador1 + "( " +xo1+ " )"
             }
             player = 1-player
             if(checkWinner()){
@@ -85,10 +91,10 @@ let player = 0
             for(k of xos){
                 if(a==k && b==k && c==k){
                     if(k == xo1){
-                    msg.textContent = document.getElementById("nombreJugador1").value + " ha ganado ( "+ k +" )"
+                    msg.textContent = jugador1 + " ha ganado ( "+ k +" )"
                 }
                 else{
-                    msg.textContent = document.getElementById("nombreJugador2").value + " ha ganado ( " + k + " )"
+                    msg.textContent = jugador2 + " ha ganado ( " + k + " )"
                 }
                     return true
                 }

@@ -12,6 +12,7 @@ body {
     background-color: rgba(31,31,31,0.7898472938);
     color: #ffffff;
     padding: 10px 20px;
+    justify-content: space-between;
 }
 
 
@@ -105,11 +106,21 @@ body {
     cursor: pointer;
 }
 #msg {
-    color: rgba(255,255,255,0.8);
     display: flex;
+    font-size: 50px;
     justify-content: center;
 }
 
+.texti{
+    background-color: rgba(31,31,31,0.7898472938);
+    color: #fff;
+}
+
+.logofoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
