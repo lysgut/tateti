@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+
     <nav class="navbar">
         <div class="logo">
             <img src="public/ttt.jpeg" alt="Logo">
@@ -14,7 +15,24 @@
         <div class="titulo">
             Tic - Tac - Toe
         </div>
+        <button id="newGame" onclick="location.reload()">Nueva Partida</button>
     </nav>
+    <div id="popupJugador1" class="popup">
+        <h2>Jugador 1</h2>
+        <input type="text" id="nombreJugador1" placeholder="Nombre del Jugador 1">
+        <label>Elige tu símbolo:</label>
+        <select id="simboloJugador1">
+            <option value=0>X</option>
+            <option value=1>O</option>
+        </select>
+        <button onclick="continuarJugador1()">Continuar</button>
+    </div>
+
+    <div id="popupJugador2" class="popup">
+        <h2>Jugador 2</h2>
+        <input type="text" id="nombreJugador2" placeholder="Nombre del Jugador 2">
+        <button onclick="continuarJugador2()">Continuar</button>
+    </div>
     <div class="gridcontainer">
 <button class="griditem" id="t1">
     <h6></h6>
@@ -36,6 +54,7 @@
     <h6></h6>
 </button>
 </div>
+<h1 id="msg"> Elije una celda inicial </h1>
     <script src="script/script.js"></script>
 </body>
 </html>
