@@ -4,6 +4,13 @@ let xo2;
 let jugador1;
 let jugador2;
 
+document.addEventListener("DOMContentLoaded", function() {
+    const popupJugador1 = document.getElementById("popupJugador1");
+    const popupJugador2 = document.getElementById("popupJugador2");
+
+    popupJugador1.style.display = "block";
+});
+
 function continuarJugador1() {
     popupJugador1.style.display = "none";
     popupJugador2.style.display = "block";
@@ -14,8 +21,6 @@ function continuarJugador1() {
 
 
 function continuarJugador2() {
-    xo1 = xo[document.getElementById("simboloJugador1").value]
-    xo2 = xo[1 - document.getElementById("simboloJugador1").value]
     jugador1 = document.getElementById("nombreJugador1").value;
     jugador2 = document.getElementById("nombreJugador2").value;
     console.log(jugador1 + " = " + xo1)
@@ -23,12 +28,7 @@ function continuarJugador2() {
     popupJugador2.style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const popupJugador1 = document.getElementById("popupJugador1");
-    const popupJugador2 = document.getElementById("popupJugador2");
 
-    popupJugador1.style.display = "block";
-});
 
 const botones = [document.getElementById("t1"), document.getElementById("t2"),document.getElementById("t3"),document.getElementById("t4"),document.getElementById("t5"),document.getElementById("t6"),document.getElementById("t7"),document.getElementById("t8"),document.getElementById("t9")]
 const msg = document.getElementById("msg")
@@ -91,10 +91,10 @@ let player = 0
             for(k of xos){
                 if(a==k && b==k && c==k){
                     if(k == xo1){
-                    msg.textContent = jugador1 + " ha ganado ( "+ k +" )"
+                    msg.textContent = jugador1 + " HA GANADO 🥳🥳🥳🥳 ( "+ k +" )"
                 }
                 else{
-                    msg.textContent = jugador2 + " ha ganado ( " + k + " )"
+                    msg.textContent = jugador2 + " HA GANADO 🥳🥳🥳🥳 ( " + k + " )"
                 }
                     return true
                 }
